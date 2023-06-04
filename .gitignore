@@ -1,0 +1,33 @@
+# Working with IntelliJ.
+.idea
+ckd.iml
+.class
+target/
+.m2/repository/
+plan.json
+
+*test**
+**/*.class
+**/*.iml
+**/target/
+**/pom.xml.versionsBackup
+
+# Working with visual studio.
+.settings
+.classpath
+.project
+.factorypath
+.class
+.lst
+**/launch.json
+**/settings.json
+
+.DS_Store
+
+# Working with Terraform locally.
+terraform.tfvars
+plan.out
+terraform.tfstate
+terraform.tfstate.backup
+.terraform
+.terraform.lock.hcl

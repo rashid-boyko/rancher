@@ -1,0 +1,26 @@
+alertmanager:
+  enabled: false
+ingressNginx:
+  enabled: true
+kubeApiServer:
+  enabled: false
+prometheus:
+  prometheusSpec:
+    remoteWrite:
+    - url: https://prometheus-us-central1.grafana.net/api/prom/push
+      basicAuth:
+        username: 
+          name: remote-writer
+          key: username
+        password: 
+          name: remote-writer
+          key: password
+    replicaExternalLabelName: "__replica__"
+    externalLabels: {cluster: "ec2-cluster-1"}
+    retention: 1d
+    scrapeInterval: 1m
+  serviceMonitor:
+    selfMonitor: false
+rkeEtcd:
+  enabled: true
+
